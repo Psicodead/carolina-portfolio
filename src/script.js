@@ -38,9 +38,9 @@ const changeBg = ()=>{
       indexLanding = indexLanding<3?indexLanding+=1:1;
       console.log('landing',indexLanding)
       
-      $('#landing .new').css('backgroundImage',`url(/assets/images/home_${indexLanding}.jpg)`)
+      $('#landing .new').css('backgroundImage',`url(./assets/images/home_${indexLanding}.jpg)`)
       TweenMax.fromTo('#landing .old', 1,{opacity:1},{opacity:0, onComplete:()=>{
-        $('#landing .old').css('backgroundImage',`url(/assets/images/home_${indexLanding}.jpg)`)
+        $('#landing .old').css('backgroundImage',`url(./assets/images/home_${indexLanding}.jpg)`)
         TweenMax.set('#landing .old',{clearProps: 'opacity'});
       }});
       break;
@@ -49,9 +49,9 @@ const changeBg = ()=>{
       console.log('about',indexAbout)
       
 
-      $('#about .new').css('backgroundImage',`url(/assets/images/about_${indexAbout}.jpg)`)
+      $('#about .new').css('backgroundImage',`url(./assets/images/about_${indexAbout}.jpg)`)
       TweenMax.fromTo('#about .old', 1,{opacity:1},{opacity:0, onComplete:()=>{
-        $('#about .old').css('backgroundImage',`url(/assets/images/about_${indexAbout}.jpg)`)
+        $('#about .old').css('backgroundImage',`url(./assets/images/about_${indexAbout}.jpg)`)
         TweenMax.set('#about .old',{clearProps: 'opacity'});
       }});
 
