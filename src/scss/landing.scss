@@ -1,0 +1,73 @@
+
+@mixin flex-center {
+    // write the css here
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin center {
+    // write the css here
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+#landing{
+    .background{
+        .old, .new{
+            background-image: url('../../static/assets/images/home_1.jpg');
+            background-size: cover;
+        }
+        .new{
+            background-image: url('../../static/assets/images/home_2.jpg');
+        }
+    }
+    #landing-nav{
+        @include center;
+        @include flex-center;
+
+        width: 700px;
+        // height: 400px;
+        #logo-landing{
+            width: 400px;
+            // height: 400px;
+        }
+        
+        .container{
+            position: absolute;
+            left: 0;
+            @include flex-center;
+            flex-direction: column;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s;
+            a{
+                font-size: 26px;
+                margin-bottom: 40px;
+                color:white;
+                text-decoration: none;
+                &:hover{
+                    border-bottom: 1px solid white;
+                }
+             
+            }
+        }
+        .instruction{
+            position: absolute;
+            color: white;
+            margin: 0;
+            font-size: 26px;
+            letter-spacing: 2px;
+            left: 5px;
+            bottom: -10px;
+        }
+        
+        &:hover{
+            .container{
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+       
+    }
+}
