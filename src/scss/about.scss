@@ -1,0 +1,42 @@
+#about{
+    .background{
+        .old, .new{
+            background-image: url('../../static/assets/images/about_1.jpg');
+            background-size: cover;
+        }
+        .new{
+            background-image: url('../../static/assets/images/about_2.jpg');
+        }
+    }
+    .content{
+        h1{
+            color: white;
+            font-weight: 100;
+            letter-spacing: 1px;
+            font-size: 93px;
+            opacity: 0;
+            
+            position: absolute;
+            &.c_1{
+                top: 304px;
+                right: 208px;
+            }
+            &.c_2{
+                left: 90px;
+                bottom: 225px;
+            }
+            &.c_3{
+                right: 226px;
+                bottom: 225px;
+            }
+            &.c_4{
+                right: 190px;
+                bottom: 350px;
+            }
+            &.c_5{
+                right: 158px;
+                bottom: 170px;
+            }
+        }
+    }
+}

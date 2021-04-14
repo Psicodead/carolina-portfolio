@@ -60,12 +60,17 @@
             letter-spacing: 2px;
             left: 5px;
             bottom: -10px;
+            transition: all 0.4s;
         }
         
         &:hover{
             .container{
                 opacity: 1;
                 pointer-events: all;
+            }
+            
+            .instruction{
+                opacity: 0;
             }
         }
        

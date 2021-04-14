@@ -39,6 +39,7 @@ main section{
     }
     .background{
         .new,.old{
+            background-position: center;
             position: absolute;
             top: 0;
             left: 0;
@@ -65,4 +66,6 @@ main section{
     
 }
 
-@import 'landing.scss'
+@import 'landing.scss';
+@import 'about.scss';
+@import 'nav.scss';
