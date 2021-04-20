@@ -31,4 +31,7 @@ nav{
             margin-left: 126px;
         }
     }
+    @media (max-height: 800px) {
+        padding-top: 30px;
+    }
 }

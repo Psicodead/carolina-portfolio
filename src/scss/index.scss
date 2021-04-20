@@ -67,7 +67,12 @@ main section{
             width: 100%;
         }
     }
-    
+    @media (max-height: 800px) {
+        bottom: 30px;
+        a{
+            width: 20px;
+        }
+    }
 }
 
 @import 'landing.scss';

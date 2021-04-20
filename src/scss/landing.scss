@@ -26,16 +26,18 @@
         @include center;
         @include flex-center;
 
-        width: 700px;
+        // width: 700px;
+        width: 50%;
         // height: 400px;
         #logo-landing{
-            width: 400px;
+            width: 35%;
+            // width: 400px;
             // height: 400px;
         }
         
         .container{
             position: absolute;
-            left: 0;
+            left: 15%;
             @include flex-center;
             flex-direction: column;
             opacity: 0;
@@ -58,7 +60,7 @@
             margin: 0;
             font-size: 26px;
             letter-spacing: 2px;
-            left: 5px;
+            left: 9%;
             bottom: -10px;
             transition: all 0.4s;
         }
