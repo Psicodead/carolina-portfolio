@@ -65,18 +65,31 @@ const changeBg = ()=>{
 }
 
 const changeSection = () =>{
-  $('section').addClass('hidden')
-  console.log(hash)
-  switch(hash){
-    case '':
-    case ' ':
-    case '#':
-      $('#landing').removeClass('hidden')
-      $('nav').addBack('hidden')
-      break;
-      case '#about':
-      $('nav').removeClass('hidden')
-      $('#about').removeClass('hidden')
-      break;
+  animateSection(hash);
+  // console.log(hash)
+}
+
+const animateSection = (sec)=>{
+  if(sec == '' || sec==' ' || sec == '#'){
+    sec= '#landing';
   }
+  
+  switch(sec){
+    case '#landing':
+      TweenMax.to('nav', 0.3,{opacity:0, onComplete:()=>{
+        $('nav').addClass('hidden')
+      }})
+      break;
+
+    case '#about':
+      $('nav').removeClass('hidden')
+      TweenMax.to('nav', 0.3,{opacity:1, delay:1.2})
+    break;
+  }
+
+  TweenMax.fromTo('section',0.4,{opacity: 1},{opacity: 0, delay: 0.3, onComplete:function(){
+    $(this._targets).addClass('hidden');
+    $(sec).removeClass('hidden');
+    TweenMax.to(sec, 0.4,{opacity:1, delay:0.1})
+  }})
 }
