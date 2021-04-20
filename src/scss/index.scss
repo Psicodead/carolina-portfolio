@@ -1,4 +1,4 @@
-// @import 'fonts.scss';
+@import 'fonts.scss';
 @import 'global.scss';
 
 @mixin flex-center {
@@ -7,6 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+*{
+    font-family: 'Arapey', Arial, Helvetica, sans-serif;
 }
 
 .hidden {
