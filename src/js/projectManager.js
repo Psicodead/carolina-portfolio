@@ -15,7 +15,7 @@ export default class ProjectManager {
 
     resize() {
 		this.isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-		this.ui.setAttribute('class', this.isMobile ? 'mobile' : 'desktop')
+		// this.ui.setAttribute('class', this.isMobile ? 'mobile' : 'desktop')
 
 	}
 
