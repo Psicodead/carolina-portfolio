@@ -7,18 +7,18 @@ nav{
     z-index: 10;
     padding: 0 56px;
     padding-top: 48px;
-    #nav-logo{
+    #nav-logos{
         width: 49px;
         height: 55px;
         display: block;
         img{
             width: 100%;
         }
-        #nav-logo-negro{
+        img#nav-logo-negro{
             display: none;
         }
         
-        #nav-logo-blanco{
+        img#nav-logo-blanco{
             display: block;
         }
     }
@@ -41,19 +41,19 @@ nav{
     @media (max-height: 800px) {
         padding-top: 30px;
     }
+}
 
-    &.dark-theme{
-        .nav-links a{
-            color: #3b3b3b;
+nav.dark-theme{
+    .nav-links a{
+        color: #3b3b3b;
+    }
+    #nav-logos{
+        img#nav-logo-negro{
+            display: block;
         }
-        #nav-logo{
-            #nav-logo-negro{
-                display: block;
-            }
-            
-            #nav-logo-blanco{
-                display: none;
-            }
+        
+        img#nav-logo-blanco{
+            display: none;
         }
     }
 }
