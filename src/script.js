@@ -2,14 +2,14 @@ import $ from 'jquery';
 import { TweenMax } from 'gsap';
 import './scss/index.scss';
 import './utils/utils';
-
+import ProjectManager from './js/projectManager';
 window.jQuery = $;
 window.$ = $;
 
 let hash = window.location.hash;
 let indexLanding = 0;
 let indexAbout = 0;
-
+const PM = new ProjectManager();
 // let $aboutChildrenText;
 // let aboutImages = ['/assets/images/about']
 console.log(hash);
@@ -45,7 +45,7 @@ const changeBg = ()=>{
       }});
       break;
     case '#about':
-      indexAbout = indexAbout<4?indexAbout+=1:1;
+      indexAbout = indexAbout<5?indexAbout+=1:1;
       console.log('about',indexAbout)
       
 
@@ -73,6 +73,9 @@ const animateSection = (sec)=>{
   if(sec == '' || sec==' ' || sec == '#'){
     sec= '#landing';
   }
+
+  $('#social-links').removeClass('dark-theme');
+  $('nav').removeClass('dark-theme');
   
   switch(sec){
     case '#landing':
@@ -80,8 +83,17 @@ const animateSection = (sec)=>{
         $('nav').addClass('hidden')
       }})
       break;
-
-    case '#about':
+    
+    case '#project-detail':
+      $('nav').removeClass('hidden')
+      
+      TweenMax.to('nav', 0.3,{opacity:1, delay:1.2, onStart:()=>{
+        $('nav').addClass('dark-theme');
+        $('#social-links').addClass('dark-theme');
+      }})
+      
+      break;
+    default:
       $('nav').removeClass('hidden')
       TweenMax.to('nav', 0.3,{opacity:1, delay:1.2})
     break;

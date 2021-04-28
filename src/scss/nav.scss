@@ -14,6 +14,13 @@ nav{
         img{
             width: 100%;
         }
+        #nav-logo-negro{
+            display: none;
+        }
+        
+        #nav-logo-blanco{
+            display: block;
+        }
     }
     .nav-links{
         position: absolute;
@@ -33,5 +40,20 @@ nav{
     }
     @media (max-height: 800px) {
         padding-top: 30px;
+    }
+
+    &.dark-theme{
+        .nav-links a{
+            color: #3b3b3b;
+        }
+        #nav-logo{
+            #nav-logo-negro{
+                display: block;
+            }
+            
+            #nav-logo-blanco{
+                display: none;
+            }
+        }
     }
 }

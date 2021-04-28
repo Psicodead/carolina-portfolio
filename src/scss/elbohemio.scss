@@ -1,0 +1,63 @@
+#elbohemio{
+    span{
+        color: #2D2B2C;
+        font-style: italic;
+        font-size: 24px;
+    }
+    article{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        
+        &.project-header{
+            align-items: end;
+        }
+        
+        figure{
+            flex-shrink: 1;
+            flex-shrink: 1;
+            margin: 1%;
+            width: 100%;
+        }
+        
+        p{
+            font-size: 24px;
+            padding: 4%;
+            word-break: break-all;
+            word-break: break-word;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            hyphens: auto;
+
+        }
+        
+        .copy{
+            padding-right: 140px;
+            height: 100%;
+            p{
+                font-size: 26px;
+                padding: 0;
+                word-break: break-word;
+
+                @media (min-width: 1921px) {
+                    font-size: 34px;
+                }
+                
+                @media (max-width: 1920px) {
+                    font-size: 26px;
+                    
+                }
+        
+                @media (max-width: 1600px) {
+                    font-size: 22px;
+                }
+            }
+            span{
+                text-align: right;
+                display: block;
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -12,6 +12,9 @@
 *{
     font-family: 'Arapey', Arial, Helvetica, sans-serif;
 }
+h1,h2,h3,h4{
+    font-weight: normal;
+}
 
 .hidden {
     display: none;
@@ -51,6 +54,41 @@ main section{
             height: 100%;
         }
     }
+
+    &#project-detail{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding: 0 10%;
+        background: white;
+        .project{
+            width: 100%;
+            p{
+                font-family: 'DarkerGrotesque', Arial, Helvetica, sans-serif;
+            }
+            h1{
+                font-size: 152px;
+                margin-bottom: 0;
+            }
+            article{
+                width: 100%;
+                figure img{
+                    width: 100%;
+                }
+            }
+
+            .color-pallet {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 10px;
+                .color {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 40px;
+                    margin: 5px;
+                }
+            }
+        }
+    }
 }
 
 #social-links{
@@ -59,7 +97,12 @@ main section{
     
     left: 27px;
     bottom: 60px;
-
+    .dark{
+        display: none;
+    }
+    .light{
+        display: block;
+    }
     a{
         width: 24px;
         margin: 0 30px;
@@ -73,8 +116,18 @@ main section{
             width: 20px;
         }
     }
+
+    &.dark-theme{
+        .dark{
+            display: block;
+        }
+        .light{
+            display: none;
+        }
+    }
 }
 
 @import 'landing.scss';
 @import 'about.scss';
 @import 'nav.scss';
+@import 'elbohemio.scss';
