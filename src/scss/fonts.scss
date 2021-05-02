@@ -18,9 +18,18 @@ $fa-font-path: '';
 
 
 @font-face {
-    font-family: 'DarkerGrotesque';
+    font-family: 'DarkerGrotesque-medium';
     src: url('../fonts/DarkerGrotesque-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
-    font-style: italic;
+    font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
+
+@font-face {
+    font-family: 'DarkerGrotesque-regular';
+    src: url('../fonts/DarkerGrotesque-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

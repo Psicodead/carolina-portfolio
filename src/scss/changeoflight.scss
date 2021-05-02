@@ -1,0 +1,115 @@
+#changeOfLight{
+    padding-top: 190px;
+
+    p.black{
+        color: #2D2B2C;
+        font-family: 'DarkerGrotesque-Medium', Arial, Helvetica, sans-serif;;
+        // font-weight: bold;
+    }
+    p{
+        color: #666666;
+        b{
+           font-weight: normal;
+           font-family: 'DarkerGrotesque-Medium';
+           
+           @media (min-width: 1921px) {
+                
+                font-size: 50px;
+            }
+            
+            @media (max-width: 1920px) {
+                font-size: 42px;
+            }
+
+            @media (max-width: 1600px) {
+                font-size: 36px;
+            }
+        }
+    }
+
+    article{
+        &:first-child{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: end;
+            
+        }
+        .title{
+            margin-top: 0;
+        }
+        .copy{
+            width: 27%;
+            margin-right: 100px; 
+        }
+        .images-wrapper{
+            width: calc(70% - 100px);
+        }
+        &.project-header{
+            align-items: end;
+        }
+        
+        figure{
+            flex-shrink: 1;
+            flex-shrink: 1;
+            margin: 0;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+        
+    
+        
+        .copy{
+           // padding-right: 140px;
+            height: 100%;
+           
+            span{
+                text-align: right;
+                display: block;
+                margin-right: 10px;
+            }
+        }
+
+        .color-pallet{
+            margin-top: 100px;
+            justify-content: flex-start !important;
+            
+            width: fit-content;
+        }
+
+        
+        &:last-child{
+            padding: 0 10%;
+            .gif{
+                margin: 50px 0;
+            }
+            span{
+                display: block;
+                text-align: right;
+            }
+
+            p{
+                margin-top: 70px;
+                margin-bottom: 150px;
+                color: #2D2B2C;
+                font-family: 'Arapey' !important;
+                font-size: 95px;
+                // display: inline;
+
+                @media (max-width: 1920px) {
+                    font-size: 68px;
+                }
+    
+                @media (max-width: 1600px) {
+                    font-size: 52px;
+                }
+                a{
+                    font-family: 'Arapey';
+                    color: #2D2B2C;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+   
+}

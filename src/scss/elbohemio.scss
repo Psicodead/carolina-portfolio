@@ -1,9 +1,5 @@
 #elbohemio{
-    span{
-        color: #2D2B2C;
-        font-style: italic;
-        font-size: 24px;
-    }
+   
     article{
         display: flex;
         flex-wrap: nowrap;
@@ -35,24 +31,7 @@
         .copy{
             padding-right: 140px;
             height: 100%;
-            p{
-                font-size: 26px;
-                padding: 0;
-                word-break: break-word;
-
-                @media (min-width: 1921px) {
-                    font-size: 34px;
-                }
-                
-                @media (max-width: 1920px) {
-                    font-size: 26px;
-                    
-                }
-        
-                @media (max-width: 1600px) {
-                    font-size: 22px;
-                }
-            }
+            
             span{
                 text-align: right;
                 display: block;
