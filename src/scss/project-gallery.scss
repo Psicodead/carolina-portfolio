@@ -1,0 +1,34 @@
+#projects{
+    .background{
+        .carousel-bg{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            &#p_1{
+                background-image: url("../../static/assets/images/galeria_1.jpg");
+            }
+            &#p_2{
+                background-image: url("../../static/assets/images/galeria_2.jpg");
+            }
+            &#p_3{
+                background-image: url("../../static/assets/images/galeria_3.jpg");
+            }
+            &#p_4{
+                background-image: url("../../static/assets/images/galeria_4.jpg");
+            }
+            &#p_5{
+                background-image: url("../../static/assets/images/galeria_5.jpg");
+            }
+            &.show{
+                opacity: 1;
+            }
+        }
+    }
+}
