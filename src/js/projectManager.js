@@ -23,6 +23,7 @@ export default class ProjectManager {
       this.projectContainer = $('#project-detail');
     //   this.renderBohemio();
       this.renderChangeOfLight();
+      this.handleProjectLinkHover();
     }
 
     initEvents(){
@@ -48,6 +49,32 @@ export default class ProjectManager {
 
     previousSection(){
         this.setActiveSection(this.sectionIndex - 1);
+    }
+
+    handleProjectLinkHover(){
+        // $('.project-link').on('hover',(e)=>{
+        //     $(e.currentTarget).find('.info').removeClass('hidden')
+        // })
+        $( '.project-link' ).hover(function(){
+            $('.project-link .info').addClass('hidden')
+            $('.project-link').removeClass('selected')
+
+            $('.project-link .info').removeClass('hidden')
+            $(this).addClass('selected')
+            const bg_sel = $(this).attr('data-bg');
+            $('.carousel-bg').removeClass('show')
+            $(`#${bg_sel}`).addClass('show')
+        } , function(){
+            // $('.project-link .info').addClass('hidden')
+            // $(this).removeClass('selected')
+        } );
+
+        $('.projects-list').mouseleave(function(){
+            $('.project-link .info').addClass('hidden')
+            $('.project-link').removeClass('selected')
+            $('.carousel-bg').removeClass('show')
+            $(`#p_0`).addClass('show')
+        })
     }
   
 
