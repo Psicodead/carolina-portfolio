@@ -1,0 +1,33 @@
+#caleidoscope{
+    padding-top: 190px;
+    margin-bottom: 150px;
+
+    article{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;        
+
+        .copy{
+            width: 40%;
+            .title{
+                margin-top: 0;
+            }
+        }
+        
+        .images-wrapper{
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            figure{
+
+                width: calc(50% - 30px);
+                margin: 15px;
+
+                &:last-child{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

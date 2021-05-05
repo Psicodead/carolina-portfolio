@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { isWindows } from '../utils/utils';
 
 export default class ProjectManager {
 	constructor() {
@@ -21,13 +22,30 @@ export default class ProjectManager {
 
     init() {
       this.projectContainer = $('#project-detail');
-    //   this.renderBohemio();
-      this.renderChangeOfLight();
+      this.renderBohemio();
+    //   this.renderChangeOfLight();
       this.handleProjectLinkHover();
+      this.handleProjectLinkClick();
     }
 
     initEvents(){
 
+    }
+    renderDetailPage(projectHash){
+        console.log(projectHash);
+        switch(projectHash){
+            case 'el-bohemio':
+                this.renderBohemio();
+                break;
+            case 'change-of-light':
+                this.renderChangeOfLight();
+                break;
+            case 'in-no-memory':
+                break;
+            case 'caleidoscope':
+                this.renderCaleidoscope();
+                break;
+        }
     }
 
     setActiveSection(index) {
@@ -49,6 +67,22 @@ export default class ProjectManager {
 
     previousSection(){
         this.setActiveSection(this.sectionIndex - 1);
+    }
+
+    handleProjectLinkClick(){
+        // data-link
+        $( '.project-link' ).click(function(){
+            const LINK = $(this).attr('data-link');
+            
+            // console.log(LINK.replace(/\-/g,' '));
+            
+            window.location =  `/#project-detail?${LINK}`;
+            if (document.title != `work | ${LINK.replace(/\-/g,' ')}`) {
+                document.title = `work | ${LINK.replace(/\-/g,' ')}`;
+            }
+            // window.history.pushState(LINK, `work | ${LINK.replace(/\-/g,' ')}`,)
+
+        })
     }
 
     handleProjectLinkHover(){
@@ -195,6 +229,30 @@ export default class ProjectManager {
                 <p class="learn-more">Want to know more about the process? <br><a href="https://issuu.com/carolina.ramirezr/docs/doc_cambio_de_luces_compressed" target="_blank">Click here</a></p>
             </article>
         </div>`);
+        this.projectContainer.html(htmlContent);
+    }
+
+    renderCaleidoscope(){
+        this.projectContainer.html('');
+        let htmlContent = 
+        $(`<div id="caleidoscope" class="project">
+            <article>
+                <div class="copy">
+                    <h1 class="title">Caleidoscope</h1>
+                    <span class="tag">Illustration</span>
+                    <p>These are another image studies that I’ve made through the years, using analog and digital resources for it. Adjusting the style to a different idea.</p>
+                </div>
+        
+                <div class="images-wrapper">
+                    <figure><img src="/assets/images/caledoscopio_1.jpg" alt=""></figure>
+                    <figure><img src="/assets/images/caledoscopio_2.jpg" alt=""></figure>
+                    <figure><img src="/assets/images/caledoscopio_3.jpg" alt=""></figure>
+                    <figure><img src="/assets/images/caledoscopio_5.jpg" alt=""></figure>
+                    <figure><img src="/assets/images/caledoscopio_4.jpg" alt=""></figure>
+                </div>
+            </article>
+        </div>`);
+
         this.projectContainer.html(htmlContent);
     }
 }

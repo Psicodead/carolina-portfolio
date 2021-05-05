@@ -83,15 +83,13 @@
                 transform: translate(-50%, -50%) rotate(45deg);
                 left: 20px;
                 top: 50%;
-
             }
             &.bohemio{
                 .title:after{
                     border-color: #a92626;
                 }
                 .info::after{
-                  background-color: #a92626;
-
+                    background-color: #a92626;
                 }
             }
             &.change-of-light{
@@ -100,7 +98,6 @@
                 }
                 .info::after{
                   background-color: black;
-
                 }
             }
             &.in-no-memory{
@@ -109,7 +106,6 @@
                 }
                 .info::after{
                   background-color: white;
-
                 }
             }
             &.caleidoscope{
@@ -117,8 +113,7 @@
                     border-color: #39b548;
                 }
                 .info::after{
-                  background-color:  #39b548;
-
+                    background-color:  #39b548;
                 }
             }
         }

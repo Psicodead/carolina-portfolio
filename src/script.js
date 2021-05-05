@@ -7,6 +7,7 @@ window.jQuery = $;
 window.$ = $;
 
 let hash = window.location.hash;
+let urlData = '';
 let indexLanding = 0;
 let indexAbout = 0;
 const PM = new ProjectManager();
@@ -16,10 +17,18 @@ console.log(hash);
 
 window.addEventListener('popstate', ()=>{
   hash = window.location.hash;
+  const temp = hash.split('?');
+  hash = temp[0];
+  urlData = temp[1];
+  // console.log(hash);
   changeSection();
- // console.log(hash);
 });
 window.onload = () =>{
+  const temp = hash.split('?');
+
+  hash = temp[0];
+  urlData = temp[1];
+
   handleBgAnimation();
   changeSection();
   // $aboutChildrenText = $('#about .copy')
@@ -65,11 +74,14 @@ const changeBg = ()=>{
 }
 
 const changeSection = () =>{
+ 
+
+  // console.log(temp)
   animateSection(hash);
   // console.log(hash)
 }
 
-const animateSection = (sec)=>{
+const animateSection = (sec,data)=>{
   if(sec == '' || sec==' ' || sec == '#'){
     sec= '#landing';
   }
@@ -85,8 +97,9 @@ const animateSection = (sec)=>{
       break;
     
     case '#project-detail':
-      $('nav').removeClass('hidden')
-      
+      PM.renderDetailPage(urlData);
+     
+      $('nav').removeClass('hidden') 
       TweenMax.to('nav', 0.3,{opacity:1, delay:1.2, onStart:()=>{
         $('nav').addClass('dark-theme');
         $('#social-links').addClass('dark-theme');
