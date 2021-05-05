@@ -299,8 +299,8 @@ export default class ProjectManager {
             <article id="chapter-2">
                 <figure><img src="/assets/images/in_no_memory_5.jpg" alt=""></figure>
                 <div class="sub-copy">
-                    <p class="black">Chapter 1:</p>
-                    <p class="sub-title">"In no Memory"</p>
+                    <p class="black">Chapter 2:</p>
+                    <p class="sub-title">"Remembrance"</p>
                     <p>It’s a retrospective view about the family memories in the traditional Colombia that was grown in the farms, the way they celebrate, how they shared different moments and the places of this family, being really different from now so the purpose of this is bring into the mind of the viewer their own background, no matter if they grew up in the territory of the images or not, it’s more taking in account the way that the old families shared and the atmosphere of them.</p>
                     <p>This idea about farms and nature it started by the collective mentality of the common past of the Latin American people even having this background most of people had been forgot their past because they’re rushing in their life or they don’t have a certain idea of the past of their families and that traditions are already disappearing in the actuality</p>
                 </div>
