@@ -123,4 +123,13 @@
     .project-link,   .projects-list{
         transition: width 600ms;
     }
+
+    @media (max-width: 480px){
+        .projects-list{
+            width: 100%;
+        }
+        .project-link .info{
+            display: none;
+        }
+    }
 }

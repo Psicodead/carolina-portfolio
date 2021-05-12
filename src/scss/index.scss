@@ -68,6 +68,7 @@ main section#project-detail{
     .project{
         width: 100%;
         opacity: 1;
+        padding-bottom: 150px;
         span{
             color: #2D2B2C;
             font-style: italic;
@@ -109,15 +110,22 @@ main section#project-detail{
         h1{
             font-size: 152px;
             margin-bottom: 0;
-            font-size: 152px;
+            // font-size: 152px;
+            font-size: 6vw;
             
             @media (max-width: 1920px) {
-                font-size: 132px;
+                // font-size: 132px;
+                font-size: 5.7vw;
                 
             }
     
             @media (max-width: 1600px) {
-                font-size: 112px;
+                // font-size: 112px;
+                font-size: 5.3vw;
+            }
+            @media (max-width: 480px) {
+                font-size: 50px;
+                
             }
             
         }
@@ -138,6 +146,16 @@ main section#project-detail{
                     height: 40px;
                     border-radius: 40px;
                     margin: 5px;
+                }
+            }
+            @media (max-width: 480px) {
+                padding-top: 30px;
+                padding-bottom: 50px;
+                .color-wrapper{
+                    justify-content: center;
+                }
+                .pallet-label{
+                    text-align: center;
                 }
             }
         }
@@ -167,6 +185,15 @@ main section#project-detail{
         bottom: 30px;
         a{
             width: 20px;
+        }
+    }
+    @media (max-width: 480px){
+        bottom: 30px;
+        transform: translateX(-50%);
+        left: 50%;
+        a{
+            width: 20px;
+            margin: 0 20px;
         }
     }
 }

@@ -1,5 +1,5 @@
 #elbohemio{
-   
+    padding-top: 190px;
     article{
         display: flex;
         flex-wrap: nowrap;
@@ -27,6 +27,10 @@
             hyphens: auto;
 
         }
+
+        h1{
+            margin: 0;
+        }
         
         .copy{
             padding-right: 140px;
@@ -36,6 +40,23 @@
                 text-align: right;
                 display: block;
                 margin-right: 10px;
+            }
+        }
+    }
+    @media (max-width: 480px) {
+        padding-top: 120px;
+        .project-header,  .block-with-copy{
+            flex-wrap: wrap;
+            p, .copy, figure{
+                padding: 0;
+                width: 100% !important;
+            }
+            p{
+                text-align: center;
+            }
+            .tag{
+                text-align: left;
+                margin-bottom: 40px;
             }
         }
     }

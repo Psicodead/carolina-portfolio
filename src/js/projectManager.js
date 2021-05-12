@@ -158,10 +158,10 @@ export default class ProjectManager {
         this.projectContainer.html('');
         let htmlContent = 
         $(`<div id="elbohemio" class="project">
-            <h1 class="title">El Bohemio</h1>
-            <span class="tag">Branding</span>
             <article class="project-header">
-                <div class="copy" style="width: 40%;">
+                <div class="copy" style="width: 45%;">
+                    <h1 class="title">El Bohemio</h1>
+                    <span class="tag">Branding</span>
                     <p>A restaurant frozen in time in Bogotá, founded in the middle of downtown, costumers of every age and class come there to taste their iconic products and remember old times. When the city was smaller and the tradition of bullfights where popular; for its history in the city and familiar tradition this place is well known between Bogotá citizens .</p>
                     <div class="color-pallet">
                         <div class="color-wrapper">
@@ -169,7 +169,7 @@ export default class ProjectManager {
                             <div class="color" style="background-color: #d79300;"></div>
                             <div class="color" style="background-color: #00111b;"></div>
                         </div>
-                        <span>Bohemio's Palette</span>
+                        <span class="pallet-label">Bohemio's Palette</span>
                     </div>
                 </div>
                 <figure style="width: 60%;"><img src="/assets/images/elbohemio_1.jpg" alt=""></figure>
@@ -186,7 +186,7 @@ export default class ProjectManager {
                 <figure><img src="/assets/images/elbohemio_6.jpg" alt=""></figure>
                 <figure><img src="/assets/images/elbohemio_7.jpg" alt=""></figure>
             </article>
-            <article class="fade-in">
+            <article class="fade-in block-with-copy">
                 <figure style="width: 60%;"><img src="/assets/images/elbohemio_8.jpg" alt=""></figure>
                 <p style="width: 40%;">With this in particular we decided to refresh the iconic image of El Bohemio, keeping the warming atmosphere that already has. Showing a modern but warm image to the public, but always taking in account the remembrance of taste, hand-made and home that the restaurant always give to their customers.</p>
             </article>

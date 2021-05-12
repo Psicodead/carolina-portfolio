@@ -5,8 +5,8 @@ nav{
     left: 0;
     top: 0;
     z-index: 10;
-    padding: 0 56px;
-    padding-top: 48px;
+    padding: 24px 56px;
+    // padding-top: 24px;
     #nav-logos{
         width: 49px;
         height: 55px;
@@ -24,7 +24,8 @@ nav{
     }
     .nav-links{
         position: absolute;
-        bottom: 0;
+        transform: translateY(-50%);
+        top: 50%;
         right: 200px;
         a{
             font-size: 24px;
@@ -41,9 +42,19 @@ nav{
     @media (max-height: 800px) {
         padding-top: 30px;
     }
+    @media (max-width: 480px) {
+        .nav-links{
+            right: 30px;
+            .link{
+                margin: 0 10px;
+            }
+        }
+    }
 }
 
 nav.dark-theme{
+    background-color: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
     .nav-links a{
         color: #3b3b3b;
     }
