@@ -88,6 +88,7 @@ const animateSection = (sec,data)=>{
     sec= '#landing';
   }
 
+  $('#copy-right').removeClass('dark-theme');
   $('#social-links').removeClass('dark-theme');
   $('nav').removeClass('dark-theme');
   
@@ -103,6 +104,7 @@ const animateSection = (sec,data)=>{
      
       $('nav').removeClass('hidden') 
       TweenMax.to('nav', 0.3,{opacity:1, delay:1.2, onStart:()=>{
+        $('#copy-right').addClass('dark-theme');
         $('nav').addClass('dark-theme');
         $('#social-links').addClass('dark-theme');
       }})
