@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { TweenMax } from 'gsap';
 import './scss/index.scss';
 import './utils/utils';
+
 import ProjectManager from './js/projectManager';
 window.jQuery = $;
 window.$ = $;
@@ -24,8 +25,8 @@ window.addEventListener('popstate', ()=>{
   changeSection();
 });
 window.onload = () =>{
+ 
   const temp = hash.split('?');
-
   hash = temp[0];
   urlData = temp[1];
 
@@ -82,6 +83,7 @@ const changeSection = () =>{
 }
 
 const animateSection = (sec,data)=>{
+  
   if(sec == '' || sec==' ' || sec == '#'){
     sec= '#landing';
   }
@@ -113,6 +115,7 @@ const animateSection = (sec,data)=>{
   }
 
   TweenMax.fromTo('section',0.4,{opacity: 1},{opacity: 0, delay: 0.3, onComplete:function(){
+    $('section').scrollTop(0); 
     $(this._targets).addClass('hidden');
     $(sec).removeClass('hidden');
     TweenMax.to(sec, 0.4,{opacity:1, delay:0.1})

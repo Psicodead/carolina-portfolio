@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import { isWindows } from '../utils/utils';
+import { TweenMax } from 'gsap';
+
 
 export default class ProjectManager {
 	constructor() {
@@ -12,17 +14,33 @@ export default class ProjectManager {
 
 		//this.resize()
 		this.init()
+        this.fadeOnScroll()
 	}
 
     resize() {
 		this.isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 		// this.ui.setAttribute('class', this.isMobile ? 'mobile' : 'desktop')
-
 	}
+
+    fadeOnScroll(){
+        $('#project-detail').scroll( function(){
+            $('.fade-in').each( function(i){
+                
+                var bottom_of_element = $(this).offset().top + $(this).outerHeight()/3;
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                
+                if( bottom_of_window > bottom_of_element ){
+                    $(this).animate({'opacity':'1'},600);
+                }
+                
+            }); 
+        });
+        
+    }
 
     init() {
       this.projectContainer = $('#project-detail');
-      this.renderBohemio();
+      this.renderDetailPage('el-bohemio');
     //   this.renderChangeOfLight();
       this.handleProjectLinkHover();
       this.handleProjectLinkClick();
@@ -47,6 +65,8 @@ export default class ProjectManager {
                 this.renderCaleidoscope();
                 break;
         }
+        console.log($('.project').children())
+        TweenMax.from('.project', 0.6, {opacity: 0, y: 50, delay: 1})
     }
 
     setActiveSection(index) {
@@ -154,31 +174,31 @@ export default class ProjectManager {
                 </div>
                 <figure style="width: 60%;"><img src="/assets/images/elbohemio_1.jpg" alt=""></figure>
             </article>
-            <article>
+            <article class="fade-in">
                 <figure><img src="/assets/images/elbohemio_2.jpg" alt=""></figure>
             </article>
-            <article>
+            <article class="fade-in">
                 <figure style="width: 30%;"><img src="/assets/images/elbohemio_3.jpg" alt=""></figure>
                 <figure  style="width: 67.4%;"><img src="/assets/images/elbohemio_4.jpg" alt=""></figure>
             </article>
-            <article>
+            <article class="fade-in">
                 <figure><img src="/assets/images/elbohemio_5.jpg" alt=""></figure>
                 <figure><img src="/assets/images/elbohemio_6.jpg" alt=""></figure>
                 <figure><img src="/assets/images/elbohemio_7.jpg" alt=""></figure>
             </article>
-            <article>
+            <article class="fade-in">
                 <figure style="width: 60%;"><img src="/assets/images/elbohemio_8.jpg" alt=""></figure>
                 <p style="width: 40%;">With this in particular we decided to refresh the iconic image of El Bohemio, keeping the warming atmosphere that already has. Showing a modern but warm image to the public, but always taking in account the remembrance of taste, hand-made and home that the restaurant always give to their customers.</p>
             </article>
-            <article>
+            <article class="fade-in">
                 <figure style="width: 30%;"><img src="/assets/images/elbohemio_9.jpg" alt=""></figure>
                 <figure style="width: 67.4%;"><img src="/assets/images/elbohemio_10.jpg" alt=""></figure>
             </article>
-            <article>
+            <article class="fade-in">
                 <figure style="width: 58.7%;"><img src="/assets/images/elbohemio_11.jpg" alt=""></figure>
                 <figure style="width: 26.1%;"><img src="/assets/images/elbohemio_12.jpg" alt=""></figure>
             </article>
-            <article>
+            <article class="fade-in">
                 <figure><img src="/assets/images/elbohemio_13.jpg" alt=""></figure>
             </article>
         </div>`);
@@ -218,13 +238,13 @@ export default class ProjectManager {
 
                 <div class="images-wrapper">
                     <figure><img src="/assets/images/changeoflights_1.jpg" alt=""></figure>
-                    <figure><img src="/assets/images/changeoflights_2.jpg" alt=""></figure>
-                    <figure><img src="/assets/images/changeoflights_3.jpg" alt=""></figure>
+                    <figure class="fade-in"><img src="/assets/images/changeoflights_2.jpg" alt=""></figure>
+                    <figure class="fade-in"><img src="/assets/images/changeoflights_3.jpg" alt=""></figure>
                 </div>
             
             </article>
             
-            <article>
+            <article class="fade-in">
                 <figure class="gif"><img src="/assets/images/changeoflight_4.gif" alt=""></figure>
                 <span>Construction process</span>
                 <p class="learn-more">Want to know more about the process? <br><a href="https://issuu.com/carolina.ramirezr/docs/doc_cambio_de_luces_compressed" target="_blank">Click here</a></p>
@@ -274,7 +294,7 @@ export default class ProjectManager {
                 </div>
             </article>
             <article id="chapter-1">
-                <div class="left">
+                <div class="left fade-in">
                     <div class="color-pallet">
                         <div class="color-wrapper">
                             <div class="color" style="background-color: #021a26;"></div>
@@ -287,7 +307,7 @@ export default class ProjectManager {
                     </div>
                     <figure><img src="/assets/images/in_no_memory_3.jpg" alt=""></figure>
                 </div>
-                <div class="right">
+                <div class="right fade-in">
                     <figure><img src="/assets/images/in_no_memory_4.jpg" alt=""></figure>
                     <div class="sub-copy">
                         <p class="black">Chapter 1:</p>
@@ -297,15 +317,15 @@ export default class ProjectManager {
                 </div>
             </article>
             <article id="chapter-2">
-                <figure><img src="/assets/images/in_no_memory_5.jpg" alt=""></figure>
-                <div class="sub-copy">
+                <figure class="fade-in"><img src="/assets/images/in_no_memory_5.jpg" alt=""></figure>
+                <div class="sub-copy fade-in">
                     <p class="black">Chapter 2:</p>
                     <p class="sub-title">"Remembrance"</p>
                     <p>It’s a retrospective view about the family memories in the traditional Colombia that was grown in the farms, the way they celebrate, how they shared different moments and the places of this family, being really different from now so the purpose of this is bring into the mind of the viewer their own background, no matter if they grew up in the territory of the images or not, it’s more taking in account the way that the old families shared and the atmosphere of them.</p>
                     <p>This idea about farms and nature it started by the collective mentality of the common past of the Latin American people even having this background most of people had been forgot their past because they’re rushing in their life or they don’t have a certain idea of the past of their families and that traditions are already disappearing in the actuality</p>
                 </div>
-                <figure><img src="/assets/images/remembrance.png" alt=""></figure>
-                <p class="footer-text">Someone who doesn’t know their history,<br>is tend to repeat it.</p>
+                <figure class="fade-in"><img src="/assets/images/remembrance.png" alt=""></figure>
+                <p class="footer-text" class="fade-in">Someone who doesn’t know their history,<br>is tend to repeat it.</p>
             </article>
         </div>`);
 
