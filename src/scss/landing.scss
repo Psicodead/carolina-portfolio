@@ -77,4 +77,26 @@
         }
        
     }
+    @media only screen 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2){
+        #landing-nav{
+            .container{
+                opacity: 1;
+                pointer-events: all;
+                left: -60px;
+                a{
+                    font-size: 56px;
+                }
+            }
+            
+            .instruction{
+                opacity: 0;
+            }
+            
+            #logo-landing{
+                width: 45%;
+            }
+        }
+    }
 }

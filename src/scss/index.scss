@@ -73,6 +73,12 @@ main section#project-detail{
             color: #2D2B2C;
             font-style: italic;
             font-size: 24px;
+
+            @media only screen 
+            and (max-device-width: 667px) 
+            and (-webkit-min-device-pixel-ratio: 2){
+                font-size:  44px;
+            } 
         }
 
         .copy{
@@ -94,6 +100,14 @@ main section#project-detail{
         
                 @media (max-width: 1600px) {
                     font-size: 22px;
+                }
+                @media only screen 
+                and (max-device-width: 667px) 
+                and (-webkit-min-device-pixel-ratio: 2){
+                    font-size:  40px;
+                } 
+                @media (max-width: 480px){
+                    font-size: 25px;
                 }
             }
 
@@ -123,9 +137,10 @@ main section#project-detail{
                 // font-size: 112px;
                 font-size: 5.3vw;
             }
-            @media (max-width: 480px) {
-                font-size: 50px;
-                
+            @media only screen 
+            and (max-device-width: 667px) 
+            and (-webkit-min-device-pixel-ratio: 2) {
+                font-size: 80px;  
             }
             
         }
@@ -148,7 +163,9 @@ main section#project-detail{
                     margin: 5px;
                 }
             }
-            @media (max-width: 480px) {
+            @media only screen 
+            and (max-device-width: 667px) 
+            and (-webkit-min-device-pixel-ratio: 2)  {
                 padding-top: 30px;
                 padding-bottom: 50px;
                 .color-wrapper{
@@ -194,6 +211,14 @@ main section#project-detail{
         a{
             width: 20px;
             margin: 0 20px;
+        }
+    }
+    @media only screen 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+        a{
+            width: 40px;
+            margin: 0 30px;
         }
     }
 }

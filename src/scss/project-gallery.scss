@@ -124,7 +124,14 @@
         transition: width 600ms;
     }
 
-    @media (max-width: 480px){
+    @media only screen 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2){
+        
+        .title{
+            font-size: 64px;
+            width: auto !important;
+        }
         .projects-list{
             width: 100%;
         }

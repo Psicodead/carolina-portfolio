@@ -43,7 +43,10 @@
             }
         }
     }
-    @media (max-width: 480px) {
+   
+    @media  only screen 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2)  {
         padding-top: 120px;
         .project-header,  .block-with-copy{
             flex-wrap: wrap;
@@ -58,6 +61,9 @@
                 text-align: left;
                 margin-bottom: 40px;
             }
+        }
+        p{
+            font-size: 40px !important;
         }
     }
 }

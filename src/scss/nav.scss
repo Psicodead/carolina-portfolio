@@ -50,6 +50,16 @@ nav{
             }
         }
     }
+    @media only screen 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2){
+        .nav-links{
+            right: 56px;
+            a{
+                font-size: 44px;
+            }
+        }
+    }
 }
 
 nav.dark-theme{
