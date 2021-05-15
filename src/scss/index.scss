@@ -62,13 +62,14 @@ main section#project-detail{
     overflow-y: scroll;
     padding: 0 10%;
     background: white;
+    padding-bottom: 150px;
+    
     .fade-in{
         opacity: 0;
     }
     .project{
         width: 100%;
         opacity: 1;
-        padding-bottom: 150px;
         span{
             color: #2D2B2C;
             font-style: italic;
@@ -172,6 +173,9 @@ main section#project-detail{
                     margin: 5px;
                 }
             }
+            .pallet-label{
+                text-align: right;
+            }
             @media only screen 
             and (max-device-width: 667px) 
             and (-webkit-min-device-pixel-ratio: 2)  {
@@ -184,6 +188,38 @@ main section#project-detail{
                     text-align: center;
                 }
             }
+        }
+    }
+    .topics{
+        text-align: center;
+        display: block;
+        @media only screen 
+        and (max-device-width: 667px) 
+        and (-webkit-min-device-pixel-ratio: 2){
+            font-size: 24px !important;
+        } 
+    }
+    .project-nav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        // color: #2D2B2C;
+        // font-style: italic;
+        font-size: 30px;
+        margin-top: 30px;
+        @media only screen 
+        and (max-device-width: 667px) 
+        and (-webkit-min-device-pixel-ratio: 2){
+            margin-bottom: 30px;
+            font-size:  50px;
+        } 
+
+        a{
+            
+            color: black;
+            font-family:  'Arapey', Arial, Helvetica, sans-serif;
+            margin: 0 10px;
         }
     }
 }

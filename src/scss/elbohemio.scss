@@ -20,12 +20,7 @@
         p{
             font-size: 24px;
             padding: 4%;
-            word-break: break-all;
             word-break: break-word;
-            -webkit-hyphens: auto;
-            -moz-hyphens: auto;
-            hyphens: auto;
-
         }
 
         h1{
@@ -37,7 +32,7 @@
             height: 100%;
             
             span{
-                text-align: right;
+                // text-align: right;
                 display: block;
                 margin-right: 10px;
             }

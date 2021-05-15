@@ -67,6 +67,7 @@ export default class ProjectManager {
         }
         console.log($('.project').children())
         TweenMax.from('.project', 0.6, {opacity: 0, y: 50, delay: 1})
+        TweenMax.from('.project-nav', 0.6, {opacity: 0, y: 50, delay: 1})
     }
 
     setActiveSection(index) {
@@ -212,8 +213,11 @@ export default class ProjectManager {
             <article class="fade-in">
                 <figure><img src="/assets/images/elbohemio_13.jpg" alt=""></figure>
             </article>
+            <span class="topics">#Branding  #DesignStrategy #DesignResearching #Brieffing #ProductPhotography</span>
         </div>`);
         this.projectContainer.html(htmlContent);
+        this.projectContainer.append(`<div class="project-nav"><a href="#project-detail?caleidoscope">Previous</a>/<a href="#project-detail?change-of-light">Next</a></div>`)
+
     }
 
     renderChangeOfLight(){
@@ -252,32 +256,11 @@ export default class ProjectManager {
                 <span>Construction process</span>
                 <p class="learn-more">Want to know more about the process? <br><a href="https://issuu.com/carolina.ramirezr/docs/doc_cambio_de_luces_compressed" target="_blank">Click here</a></p>
             </article>
+            <span class="topics">#ArtDirection #PropMaking #EditorialPhotography #DesignResearching #HandmadeBackground</span>
         </div>`);
         this.projectContainer.html(htmlContent);
-    }
+        this.projectContainer.append(`<div class="project-nav"><a href="#project-detail?el-bohemio">Previous</a>/<a href="#project-detail?in-no-memory">Next</a></div>`)
 
-    renderCaleidoscope(){
-        this.projectContainer.html('');
-        let htmlContent = 
-        $(`<div id="caleidoscope" class="project">
-            <article>
-                <div class="copy">
-                    <h1 class="title">Caleidoscope</h1>
-                    <span class="tag">Illustration</span>
-                    <p>These are another image studies that I’ve made through the years, using analog and digital resources for it. Adjusting the style to a different idea.</p>
-                </div>
-        
-                <div class="images-wrapper">
-                    <figure><img src="/assets/images/caledoscopio_1.jpg" alt=""></figure>
-                    <figure><img src="/assets/images/caledoscopio_2.jpg" alt=""></figure>
-                    <figure><img src="/assets/images/caledoscopio_3.jpg" alt=""></figure>
-                    <figure><img src="/assets/images/caledoscopio_5.jpg" alt=""></figure>
-                    <figure><img src="/assets/images/caledoscopio_4.jpg" alt=""></figure>
-                </div>
-            </article>
-        </div>`);
-
-        this.projectContainer.html(htmlContent);
     }
 
     renderInNoMemory(){
@@ -346,8 +329,37 @@ export default class ProjectManager {
                 <figure class="fade-in"><img src="/assets/images/remembrance.png" alt=""></figure>
                 <p class="footer-text" class="fade-in">Someone who doesn’t know their history, <br>is tend to repeat it.</p>
             </article>
+            <span class="topics">#FineArt #AstroPhotography #Research #CuratorialWork #Writting</span>
+        </div>`);
+        
+        this.projectContainer.html(htmlContent);
+        this.projectContainer.append(`<div class="project-nav"><a href="#project-detail?change-of-light">Previous</a>/<a href="#project-detail?caleidoscope">Next</a></div>`)
+    }
+    
+    renderCaleidoscope(){
+        this.projectContainer.html('');
+        let htmlContent = 
+        $(`<div id="caleidoscope" class="project">
+            <article>
+                <div class="copy">
+                    <h1 class="title">Caleidoscope</h1>
+                    <span class="tag">Illustration</span>
+                    <p>These are another image studies that I’ve made through the years, using analog and digital resources for it. Adjusting the style to a different idea.</p>
+                </div>
+        
+                <div class="images-wrapper">
+                    <figure><img src="/assets/images/caledoscopio_1.jpg" alt=""></figure>
+                    <figure><img src="/assets/images/caledoscopio_2.jpg" alt=""></figure>
+                    <figure><img src="/assets/images/caledoscopio_3.jpg" alt=""></figure>
+                    <figure><img src="/assets/images/caledoscopio_5.jpg" alt=""></figure>
+                    <figure><img src="/assets/images/caledoscopio_4.jpg" alt=""></figure>
+                </div>
+            </article>
+            <span class="topics">#Illustration #AnalogueIllustration #DigitalIllustration</span>
         </div>`);
 
         this.projectContainer.html(htmlContent);
+        this.projectContainer.append(`<div class="project-nav"><a href="#project-detail?in-no-memory">Previous</a>/<a href="#project-detail?el-bohemio">Next</a></div>`)
+
     }
 }

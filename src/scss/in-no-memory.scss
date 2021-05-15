@@ -6,10 +6,6 @@
         justify-content: space-between;
         // flex-wrap: wrap;
 
-        &:last-child{
-            flex-direction: column;
-        }
-
         .copy{
             .title{
                 margin-top: 0;
@@ -117,6 +113,7 @@
         }
 
         &#chapter-2{
+            flex-direction: column;
             figure{
                 margin: 0;
                 width: 100%;

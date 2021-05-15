@@ -65,7 +65,7 @@
             margin-right: 0;
            
             span{
-                text-align: right;
+                // text-align: right;
                 display: block;
                 margin-right: 10px;
             }
@@ -79,7 +79,7 @@
         // }
 
         
-        &:last-child{
+        &:not(:first-child){
             padding: 0 10%;
             .gif{
                 margin: 50px 0;
@@ -111,6 +111,16 @@
                 }
             }
         }
+        // .learn-more{
+        //     text-align: center;
+        //     font-size: ;
+        //     a{
+        //         text-align: center;
+        //         // display: block;
+        //         width: 100%;
+        //         margin-top: 30px;
+        //     }
+        // }
     }
 
     @media  only screen 
