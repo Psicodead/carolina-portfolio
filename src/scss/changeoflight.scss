@@ -133,9 +133,14 @@
 
         .learn-more{
             text-align: center;
+            
+            br{
+                display: none;
+            }
+
             a{
                 text-align: center;
-                display: block;
+                // display: block;
                 width: 100%;
                 margin-top: 30px;
             }

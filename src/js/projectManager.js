@@ -280,6 +280,22 @@ export default class ProjectManager {
                     <p>The mentality of each person about family, traditions, people and stories are connected to a specific time of childhood, that invokes some sounds, colors and concrete lightings. Bodies that came to life again in this photo graphs by the use of the light that made a trip through the fading color in the walls cause of the sun, the moon, wind and water as their main amplifiers; cracks had been made by the use of the place when was inha bited, some of them are hidden and they're just noticed by the projections.</p>
                 </div>
 
+                <div class="sub-copy mobile">
+                    <p class="black">Chapter 1:</p>
+                    <p class="sub-title">"In no Memory"</p>
+                    <p>Was born by 2 stories about Rico Family, La Concordia and Coacha, buildings that shared as people as photographic files that were saved by the family, that’s why a parallel can be created about what is now and what was there, the differences and similarities between people and traditions of the past there.</p>
+                    <div class="color-pallet">
+                        <div class="color-wrapper">
+                            <div class="color" style="background-color: #021a26;"></div>
+                            <div class="color" style="background-color: #2b606e;"></div>
+                            <div class="color" style="background-color: #ff6549;"></div>
+                            <div class="color" style="background-color: #ff9138;"></div>
+                            <div class="color" style="background-color: #ffeb2a;"></div>
+                        </div>
+                        <span class="pallet-label">Project’s Palette</span>
+                    </div>
+                </div>
+
                 <div class="images-wrapper">
                     <figure><img src="/assets/images/in_no_memory_1.jpg" alt=""></figure>
                     <figure><img src="/assets/images/in_no_memory_2.jpg" alt=""></figure>
@@ -307,9 +323,9 @@ export default class ProjectManager {
                         <p>Was born by 2 stories about Rico Family, La Concordia and Coacha, buildings that shared as people as photographic files that were saved by the family, that’s why a parallel can be created about what is now and what was there, the differences and similarities between people and traditions of the past there.</p>
                     </div>
                 </div>
+                <figure class="fade-in full-bleed"><img src="/assets/images/in_no_memory_5.jpg" alt=""></figure>
             </article>
             <article id="chapter-2">
-                <figure class="fade-in"><img src="/assets/images/in_no_memory_5.jpg" alt=""></figure>
                 <div class="sub-copy fade-in">
                     <p class="black">Chapter 2:</p>
                     <p class="sub-title">"Remembrance"</p>
@@ -317,7 +333,7 @@ export default class ProjectManager {
                     <p>This idea about farms and nature it started by the collective mentality of the common past of the Latin American people even having this background most of people had been forgot their past because they’re rushing in their life or they don’t have a certain idea of the past of their families and that traditions are already disappearing in the actuality</p>
                 </div>
                 <figure class="fade-in"><img src="/assets/images/remembrance.png" alt=""></figure>
-                <p class="footer-text" class="fade-in">Someone who doesn’t know their history,<br>is tend to repeat it.</p>
+                <p class="footer-text" class="fade-in">Someone who doesn’t know their history, <br>is tend to repeat it.</p>
             </article>
         </div>`);
 

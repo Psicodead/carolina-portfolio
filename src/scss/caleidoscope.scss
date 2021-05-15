@@ -30,4 +30,15 @@
             }
         }
     }
+
+    @media  only screen 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2)  {
+        article{
+            flex-wrap: wrap;
+            .copy, .images-wrapper{
+                width: 100%;
+            }
+        }
+    }
 }
