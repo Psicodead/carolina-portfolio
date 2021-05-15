@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { isWindows } from '../utils/utils';
+import { isWindows, isMobile } from '../utils/utils';
 import { TweenMax } from 'gsap';
 
 
@@ -18,7 +18,7 @@ export default class ProjectManager {
 	}
 
     resize() {
-		this.isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+		// this.isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 		// this.ui.setAttribute('class', this.isMobile ? 'mobile' : 'desktop')
 	}
 
@@ -111,6 +111,8 @@ export default class ProjectManager {
         //     $(e.currentTarget).find('.info').removeClass('hidden')
         // })
         $( '.project-link' ).hover(function(){
+            if(isMobile())
+                return
             $('.project-link .info').addClass('hidden')
             $('.project-link').removeClass('selected')
 
@@ -119,16 +121,25 @@ export default class ProjectManager {
             const bg_sel = $(this).attr('data-bg');
             $('.carousel-bg').removeClass('show')
             $(`#${bg_sel}`).addClass('show')
+            
+            TweenMax.to('.project-link .title',0.3, {x: -120});
+            TweenMax.to('.project-link .info',0.3, {x: 120});
         } , function(){
             // $('.project-link .info').addClass('hidden')
             // $(this).removeClass('selected')
         } );
 
         $('.projects-list').mouseleave(function(){
-            $('.project-link .info').addClass('hidden')
+            if(isMobile())
+                return
+            // $('.project-link .info').addClass('hidden')
             $('.project-link').removeClass('selected')
             $('.carousel-bg').removeClass('show')
             $(`#p_0`).addClass('show')
+            TweenMax.to('.project-link .title',0.3, {x: 0});
+            TweenMax.to('.project-link .info',0.3, {x: 0, onComplete:function(){
+                $('.project-link .info').addClass('hidden')
+            }});
         })
     }
   
