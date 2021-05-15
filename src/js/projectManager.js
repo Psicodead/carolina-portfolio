@@ -271,7 +271,7 @@ export default class ProjectManager {
                 <div class="copy">
                     <h1 class="title">In no memory</h1>
                     <span class="tag">Fine Art photography</span>
-                    <p>The mentality of each person about family, traditions, people and stories are connected to a specific time of childhood, that invokes some sounds, colors and concrete lightings. Bodies that came to life again in this photo graphs by the use of the light that made a trip through the fading color in the walls cause of the sun, the moon, wind and water as their main amplifiers; cracks had been made by the use of the place when was inha bited, some of them are hidden and they're just noticed by the projections.</p>
+                    <p>The mentality of each person about family, traditions, people and stories are connected to a specific time of childhood, that invokes some sounds, colors and concrete lightings. Bodies that came to life again in this photo graphs by the use of the light that made a trip through the fading color in the walls cause of the sun, the moon, wind and water as their main amplifiers; cracks had been made by the use of the place when was inhabited, some of them are hidden and they're just noticed by the projections.</p>
                 </div>
 
                 <div class="sub-copy mobile">
