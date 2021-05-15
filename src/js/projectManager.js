@@ -216,14 +216,6 @@ export default class ProjectManager {
 
                     <p class="black"> Art direction of props and photography inspired by the short story “A change of light” written by the poet Julio Cortázar, where the historical, social and aestethic research where the main thing for it. At the same time, the construction of the characters of the story, with their thougths, behaviour and own aesthetic.</p>
 
-                    <p><b>”I</b> preferred to keep it that way, the fullness was so great that I did not want to think of its vague silence, of a distraction that I had not known before, in a way of looking at me at times as if was looking for something, a flicker of gaze quickly returned to the immediate, to the cat or to a book. That also entered my way of preferring her, it was the melancholic atmosphere of the covered gallery, of the lilac envelopes.</p>
-                    
-                    <p>I know that in some late night awakening, watching her sleep against me, I felt that the time had come to tell her, to make her definitely mine by a total acceptance of my slow web of love. I did not do it because Luciana was sleeping, because Luciana was awake, because that Tuesday we were going to the movies, because we were looking for a car for the holidays because life came in big screens before and after the sunsets in which the ashen light seemed to condense its perfection into the pause of the wicker chair.</p>
-                    
-                    <p>That she spoke so little to me now, that sometimes she looked at me again as if looking for something lost, delayed in me the dark need to entrust him with the truth to finally explain the brown hair, the light from the gallery I had no time, a random schedule changed she took me to the center one end of the morning, I saw her leave a hotel, I did not recognize her when I recognized her, I did not understand when I understood that she was leaving holding the arm of a man taller than me.”</p>
-                    
-                    <span>Choosen scene</span>
-
                     <div class="color-pallet">
                         <div class="color-wrapper">
                             <div class="color" style="background-color: #ea739f;"></div>

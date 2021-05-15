@@ -108,8 +108,17 @@ main section#project-detail{
                 } 
                 @media (max-width: 480px){
                     font-size: 25px;
-                }
+                }  
             }
+
+            @media only screen 
+            and (max-device-width: 667px) 
+            and (-webkit-min-device-pixel-ratio: 2){
+                .tag{
+                    text-align: left !important;
+                }
+            } 
+            
 
             // span{
             //     text-align: right;
@@ -180,8 +189,7 @@ main section#project-detail{
 }
 
 footer{
-    position: absolute;
-    
+    position: absolute; 
     left: 0;
     bottom: 0;
     width: 100%;
@@ -235,11 +243,15 @@ footer{
     color: white;
     position: absolute;
     right: 50px;
-    bottom: 40px;
+    bottom: 10px;
     font-size: 24px;
     &.dark-theme{
         color: #3b3b3b;
     }
+    @media (max-height: 800px) {
+        bottom: 10px;
+    }
+
     @media only screen 
     and (max-device-width: 667px) 
     and (-webkit-min-device-pixel-ratio: 2) {
